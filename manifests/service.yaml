@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-spring-boot-app-openshiftawefwqer
+  labels:
+    app: sample-spring-boot-app-openshiftawefwqer
+  annotations:
+    backstage.io/kubernetes-id: sample-spring-boot-app-openshiftawefwqer
+spec:
+  type: ClusterIP
+  selector:
+    app: sample-spring-boot-app-openshiftawefwqer
+  ports:
+    - port: 8080
+      protocol: TCP
+      name: http
